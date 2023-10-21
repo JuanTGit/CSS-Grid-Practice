@@ -1,0 +1,69 @@
+h1{
+    background-color: aqua;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    height: 400px;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "main main main ad"
+    "main main main ad";
+}
+
+.ad-area{
+    grid-area: ad;
+}
+
+.grid-area{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    height: 300px;
+}
+
+.item-1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.logo-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    /* height: 300px; */
+    grid-template-areas:
+    "adidas apple amazon beats";
+}
+
+.adidas{
+    grid-area: adidas;
+}
+
+.amazon{
+    grid-area: amazon;
+}
+
+.apple{
+    grid-area: apple;
+}
+
+.beats{
+    grid-area: beats;
+}
+
+.logo-grid img{
+    width: 100%;
+    height: auto;
+    place-self: center;
+}
+
+.logo-grid > div{
+    border: 1px solid black;
+    max-height: 50vh;
+
+}
